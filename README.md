@@ -44,20 +44,19 @@ Kirjastot ja Framworkit
 
 
 TIDOSTOT JA KOMPONENTIT 
+------------------------
 
 App.js
-------
+
 
 Täällä App wrapataan Apollo provideriin jotta Apollon hakema data saadaan koko apin käyttöön.
 Tehdään myös Apollo Cli sekä määritellän rest link 
 
------------------
 
 Useamman endpointin määrittely:
 
  const link = new RestLink({ endpoints: { v1: 'open-api.myhelsinki.fi/events/v1', v2: 'open-api.myhelsinki.fi/events/v2' } });
 
---------------------
 
 Clientin määrittely ja cachen määrittely
 
@@ -67,17 +66,12 @@ const client = new ApolloClient({
 });
 
 
---------------------------
-
 const App = () => (
   <ApolloProvider client={client}>
     <MyRootComponent />
   </ApolloProvider>
 );
 
-
-
-----------------------------
 
 
 Queries.js 
