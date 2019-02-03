@@ -47,6 +47,7 @@ TIDOSTOT JA KOMPONENTIT
 ------------------------
 
 App.js
+------
 
 
 Täällä App wrapataan Apollo provideriin jotta Apollon hakema data saadaan koko apin käyttöön.
@@ -75,9 +76,9 @@ const App = () => (
 
 
 Queries.js 
----------
+-----------
 	
-täällä tehdään haut 
+Tehdään haut. 
 
 ESIMERKKI REST APIIN TEHDYSTÄ HAUSTA 
 
@@ -108,8 +109,8 @@ EventList.js
 
 Kun <Eventlist /> mounttaa hakee se samalla 5 viimeistä tapahtumaa ja niiden tiedot.
 
-ESIMERKKI 
---------
+
+Esimerkki:
 
 client.GET_EVENTS({ query }).then(response => {
   console.log(response.data.name);                 //// JSONiin consolen sijaan
@@ -123,20 +124,20 @@ Sisältää myös napit uutta hakua varten ellei sitä haluta siirtää toiselle
 Navi.js 
 -------
 
-	Navigointi jos sille tulee tarvetta 
+Navigointia käytetään uuden haun tekemiseen toisella sivulla.
 
 Styles.js 
 ---------
 	
-	Stylet omalla tiedostolla CSS tyyliin 
+Tyylit omalla tiedostolla CSS tyyliin 
 
 
 
-_Test_.js 
+Testit 
 ---------
 
-	Testataan tuleeko data oikein APIsta ja rendaako se flatlistiin oikein (snapshot). 
-	Voidaan testata tunnetua tulosta ja verrata sitä _mocks_.js tehtyyn tulokseen. 
+Testataan tuleeko data oikein APIsta mockkaamalla tulos. 
+Snapshotilla testataan renderöityykö komponentit oikein. 
 
 
 
