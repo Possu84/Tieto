@@ -17,8 +17,8 @@ HAASTE
 -Miten REST API saadaan wrapattua täysin clientin puolella
 
 
-Tech 
-----
+Kirjastot ja Framworkit
+------------------------
 
 --- apollo-link-rest
 	apollo-link 
@@ -48,8 +48,8 @@ TIDOSTOT JA KOMPONENTIT
 App.js
 ------
 
-	Täällä App wrapataan Apollo provideriin jotta Apollon hakema data saadaan koko apin käyttöön.
-	Tehdään myös Apollo Cli sekä määritellän rest link 
+Täällä App wrapataan Apollo provideriin jotta Apollon hakema data saadaan koko apin käyttöön.
+Tehdään myös Apollo Cli sekä määritellän rest link 
 
 -----------------
 
@@ -107,12 +107,12 @@ EventFrame.js
 -------------
 
 
-Event listin frame joka sisältäää default nimet ja rakenteen eventlisiin tulevalle datalle sekä stuyle linkkaukset 
+Event listin frame joka sisältäää otsikot ja rakenteen EventListiin tulevalle datalle sekä style linkkaukset 
 
 EventList.js
 ------------
 
-Kun tämä mounttaa hakee se samalla 5 viimeistä tapahtumaa ja niiden tiedot.
+Kun <Eventlist /> mounttaa hakee se samalla 5 viimeistä tapahtumaa ja niiden tiedot.
 
 ESIMERKKI 
 --------
