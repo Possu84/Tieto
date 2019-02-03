@@ -5,7 +5,7 @@ Jonas Pooters
 "HELSINGIN TAPAHTUMA APP" 
 ------------------------ 
 
--Hakee 10 viimeisintä tapauhtumaa 
+-Hakee 6 viimeisintä tapauhtumaa 
 -näyttää ajan, paikan, kuvauksen sekä linkin 
 
 open-api.myhelsinki.fi/events/ 
@@ -50,19 +50,20 @@ App.js
 ------
 
 
-Täällä App wrapataan Apollo provideriin jotta Apollon hakema data saadaan koko apin käyttöön.
-Tehdään myös Apollo Cli sekä määritellän rest link 
+App.js App wrapataan Apollo provideriin, jotta Apollon hakema data saadaan koko apin käyttöön.
+Luodaan Apollo Cli sekä määritellän REST APIn osoite.
 
 
 Useamman endpointin määrittely:
 
- const link = new RestLink({ endpoints: { v1: 'open-api.myhelsinki.fi/events/v1', v2: 'open-api.myhelsinki.fi/events/v2' } });
+const link = new RestLink({ endpoints: { v1: 'open-api.myhelsinki.fi/events/v1', v2: 'open-api.myhelsinki.fi/events/v2' } });
 
 
-Clientin määrittely ja cachen määrittely
+Clientin määrittely ja cachen määrittely:
+
 
 const client = new ApolloClient({
-  link: restLink,
+  link: restLink,						
   cache: new InMemoryCache(),     /// in memory cache määritellään täällä  
 });
 
@@ -102,12 +103,12 @@ EventFrame.js
 -------------
 
 
-Event listin frame joka sisältäää otsikot ja rakenteen EventListiin tulevalle datalle sekä style linkkaukset 
+Event listin frame joka sisältäää otsikot (tapahtumanimet ja rakenteen EventListiin tulevalle 
 
 EventList.js
 ------------
 
-Kun <Eventlist /> mounttaa hakee se samalla 5 viimeistä tapahtumaa ja niiden tiedot.
+Sisältää <Eventlist /> komponentin.  Kun <Eventlist /> mounttaa hakee se ( GET_EVENTS ) samalla 6 viimeistä tapahtumaa ja niiden tiedot.
 
 
 Esimerkki:
@@ -118,13 +119,13 @@ client.GET_EVENTS({ query }).then(response => {
 
 Sisältää myös <Flatlist /> componentin johon tulokset rendataa.
 
-Sisältää myös napit uutta hakua varten ellei sitä haluta siirtää toiselle sivulle. 
-
 
 Navi.js 
 -------
 
-Navigointia käytetään uuden haun tekemiseen toisella sivulla.
+Navigointia käytetään uuden haun tekemiseen toisella sivulla ja palaamiseen. 
+
+
 
 Styles.js 
 ---------
