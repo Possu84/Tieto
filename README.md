@@ -1,4 +1,5 @@
 # Tieto
+
 Jonas Pooters 
 
 "HELSINGIN TAPAHTUMA APP" 
@@ -140,8 +141,8 @@ Styles.js
 _Test_.js 
 ---------
 
-	Testataan tuleeko data oikein ja rendaako se flatlistiin  - JEST 
-
+	Testataan tuleeko data oikein APIsta ja rendaako se flatlistiin oikein (snapshot). 
+	Voidaan testata tunnetua tulosta ja verrata sitä _mocks_.js tehtyyn tulokseen. 
 
 
 
