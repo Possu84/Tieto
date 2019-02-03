@@ -20,27 +20,27 @@ HAASTE
 Kirjastot ja Framworkit
 ------------------------
 
---- apollo-link-rest
+- apollo-link-rest
 	apollo-link 
 		- Rest APIin yhdistämiseen
---- apollo-client
+- apollo-client
 		- Apollo Graphql clientin rakentamiseen 
---- react-apollo
+- react-apollo
 		- sisältää graphql 
 		- graphql:n helppoon implementointii react native apissa 
---- apollo-cache-inmemory
+- apollo-cache-inmemory
 		-jo tehtyjen hakujen catcheemiseen
---- react-native
+- react-native
 		- interfacen rakentamiseen 
---- react-native-navigation
+- react-native-navigation
 		-navigoinnin rakentamiseen 
 
---- jest 
+- jest 
 		-testaukseen
---- expo 
+- expo 
 		-kehitykseen 
 
---- Postman - rest apin kokeiluun/testaukseen ja analysointiin 
+- Postman - rest apin kokeiluun/testaukseen ja analysointiin 
 
 
 TIDOSTOT JA KOMPONENTIT 
