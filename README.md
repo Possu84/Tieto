@@ -48,8 +48,8 @@ TIDOSTOT JA KOMPONENTIT
 App.js
 ------
 
-	Täällä App wrapataan Apollo privedriin jotta Apollon hakema data saadaan koko apin käyttöön tähän tapaan.
-	Tehdään myös Apollo Cli sekä määritellän res link 
+	Täällä App wrapataan Apollo provideriin jotta Apollon hakema data saadaan koko apin käyttöön.
+	Tehdään myös Apollo Cli sekä määritellän rest link 
 
 -----------------
 
@@ -87,19 +87,27 @@ täällä tehdään haut
 
 ESIMERKKI REST APIIN TEHDYSTÄ HAUSTA 
 
-const query = gql`
-  query luke {
-    person @rest(type: "Person", path: "people/1/") {
-      name
-    }
-  }
-`;
+query GET_EVENTS {
+	Events @rest(type: "Event", path: "/events") {
+		total
+		data @type(name: "name") {
+			id
+			date
+			date-end
+			link
+			kuvaus
+
+		}
+	}
+}
+
+
 
 EventFrame.js
 -------------
 
 
-Event listin frame joka sisältäää default nimet ja rakenteen eventlisiin tulevalle datalle.
+Event listin frame joka sisältäää default nimet ja rakenteen eventlisiin tulevalle datalle sekä stuyle linkkaukset 
 
 EventList.js
 ------------
@@ -109,7 +117,7 @@ Kun tämä mounttaa hakee se samalla 5 viimeistä tapahtumaa ja niiden tiedot.
 ESIMERKKI 
 --------
 
-client.query({ query }).then(response => {
+client.GET_EVENTS({ query }).then(response => {
   console.log(response.data.name);                 //// JSONiin consolen sijaan
 });
 
@@ -121,7 +129,7 @@ Sisältää myös napit uutta hakua varten ellei sitä haluta siirtää toiselle
 Navi.js 
 -------
 
-	NAvigointi jos sille tulee tarvetta 
+	Navigointi jos sille tulee tarvetta 
 
 Styles.js 
 ---------
