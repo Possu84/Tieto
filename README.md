@@ -9,6 +9,7 @@ Jonas Pooters
 
 open-api.myhelsinki.fi/events/ 
 
+----MAHDOLLISIA-LISÄ-OMINAISUUKSIA-----
 
 HAASTE
 ------
@@ -118,17 +119,25 @@ Sisältää myös napit uutta hakua varten ellei sitä haluta siirtää toiselle
 
 
 Navi.js 
+-------
 
 	NAvigointi jos sille tulee tarvetta 
 
 Styles.js 
+---------
 	
 	Stylet omalla tiedostolla CSS tyyliin 
 
 
 
 _Test_.js 
+---------
 
 	Testataan tuleeko data oikein ja rendaako se flatlistiin  - JEST 
+
+
+
+
+
 
 
