@@ -9,7 +9,6 @@ Jonas Pooters
 
 open-api.myhelsinki.fi/events/ 
 
-----MAHDOLLISIA-LISÄ-OMINAISUUKSIA-----
 
 HAASTE
 ------
