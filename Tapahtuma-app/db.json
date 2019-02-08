@@ -1,0 +1,22 @@
+{
+  "events": [
+    {
+      "title": "Festarit",
+      "date": "2020-03-29T13:45:18.000Z",
+      "location": "Kamppi",
+      "id": "3"
+    },
+    {
+      "title": "Työpaja",
+      "date": "2020-03-29T13:45:18.000Z",
+      "location": "Kamppi",
+      "id": "2"
+    },
+    {
+      "title": "Demo a new app",
+      "date": "2020-03-29T13:45:18.000Z",
+      "location": "Kamppi",
+      "id": "1"
+    }
+  ]
+}
