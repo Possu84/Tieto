@@ -2,20 +2,22 @@ import React, { Component } from 'react';
 import { Text, FlatList, View, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-    kontti: {
-      flex: 1,
-      backgroundColor: '#fff',
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    list: {
-       
-    },
-    teksti: {
-        color: 'red',
-    }
-  });
+  kontti: {
+    flex: 1,
+    marginTop: 75,
+    alignItems: 'center',
+    alignContent: 'center'
+  },
+  list: {},
+  teksti: {
+    marginTop: 10,
+    color: 'red',
+    flex: 1,
+    backgroundColor: '#fff',
+   
+  
+  }
+});
 
 class EventList extends Component {
   state = {
@@ -29,12 +31,13 @@ class EventList extends Component {
 
   render() {
     return (
-      <View tyle={styles.kontti}>
-        <FlatList tyle={styles.list}
+      <View style={styles.kontti}>
+        <FlatList
+          style={styles.list}
           data={this.state.tapahtumat} /// syöttö
           renderItem={({ item }) => (
             <Text style={styles.teksti}>
-              {item.paikka} {item.aika}
+              {item.paikka} {'\n'} {item.aika}
             </Text>
           )}
           keyExtractor={item => item.id}
@@ -45,7 +48,3 @@ class EventList extends Component {
 }
 
 export default EventList;
-
-
-
-

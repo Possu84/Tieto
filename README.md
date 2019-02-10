@@ -21,7 +21,7 @@ Kirjastot ja Framworkit
 ------------------------
 
 - apollo-link-rest
-	apollo-link 
+- apollo-link 
 		- Rest APIin yhdistämiseen
 - apollo-client
 		- Apollo Graphql clientin rakentamiseen 
